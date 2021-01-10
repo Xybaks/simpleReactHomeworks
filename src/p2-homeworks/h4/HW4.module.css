@@ -1,0 +1,14 @@
+.blue {
+    border-bottom: 5px solid blue;
+    margin: 5px;
+}
+
+.column {
+    align-items: center;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 10px solid greenyellow;
+    border-radius: 15px;
+    background-color: #8bfffc;
+}

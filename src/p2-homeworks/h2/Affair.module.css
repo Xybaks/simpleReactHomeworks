@@ -1,0 +1,14 @@
+
+.high {
+    color: crimson;
+}
+.middle {
+    color: green;
+}
+.low {
+    color: goldenrod;
+}
+
+.button{
+    margin-left:  15px;
+}
