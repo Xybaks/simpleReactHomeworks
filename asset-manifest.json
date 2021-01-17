@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/simpleReactHomeworks/static/css/main.d90c0a80.chunk.css",
+    "main.js": "/simpleReactHomeworks/static/js/main.e4f80106.chunk.js",
+    "main.js.map": "/simpleReactHomeworks/static/js/main.e4f80106.chunk.js.map",
+    "runtime-main.js": "/simpleReactHomeworks/static/js/runtime-main.1ae8533a.js",
+    "runtime-main.js.map": "/simpleReactHomeworks/static/js/runtime-main.1ae8533a.js.map",
+    "static/js/2.03b0692f.chunk.js": "/simpleReactHomeworks/static/js/2.03b0692f.chunk.js",
+    "static/js/2.03b0692f.chunk.js.map": "/simpleReactHomeworks/static/js/2.03b0692f.chunk.js.map",
+    "index.html": "/simpleReactHomeworks/index.html",
+    "precache-manifest.66e25888fc76b06ed9d83580263508b3.js": "/simpleReactHomeworks/precache-manifest.66e25888fc76b06ed9d83580263508b3.js",
+    "service-worker.js": "/simpleReactHomeworks/service-worker.js",
+    "static/css/main.d90c0a80.chunk.css.map": "/simpleReactHomeworks/static/css/main.d90c0a80.chunk.css.map",
+    "static/js/2.03b0692f.chunk.js.LICENSE.txt": "/simpleReactHomeworks/static/js/2.03b0692f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ae8533a.js",
+    "static/js/2.03b0692f.chunk.js",
+    "static/css/main.d90c0a80.chunk.css",
+    "static/js/main.e4f80106.chunk.js"
+  ]
+}
