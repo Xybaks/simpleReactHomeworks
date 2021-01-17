@@ -1,0 +1,27 @@
+.errorPage{
+display: flex;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%)
+}
+
+.title{
+    font-size: xx-large;
+    margin: 10px;
+}
+.someText{
+    font-size: xx-large;
+    color: darkblue;
+    margin: 10px;
+}
+
+.someSmile{
+    border: 10px solid greenyellow;
+    border-radius: 15px;
+    font-size: xx-large;
+    color: dodgerblue;
+    margin: 10px;
+    background-color: orange;
+}

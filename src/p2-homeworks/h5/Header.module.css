@@ -1,0 +1,25 @@
+.fullHeader{
+    width:  500px;
+    background-color: greenyellow;
+    border-radius: 20px;
+    transition-duration: 1s;
+    align-content: center;
+}
+.notFullHeader{
+    transform: translateY(-100%);
+    transition-duration: 1s;
+    width:  500px;
+    background-color: greenyellow;
+    border-radius: 20px;
+    align-content: center;
+}
+.header {
+    display: inline-flex;
+    width:  550px;
+
+}
+.links {
+    background-color: greenyellow;
+    font-size: xx-large;
+    margin: 20px;
+}
