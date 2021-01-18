@@ -1,5 +1,5 @@
 .fullHeader{
-    width:  500px;
+    width:  600px;
     background-color: greenyellow;
     border-radius: 20px;
     transition-duration: 1s;
@@ -8,7 +8,7 @@
 .notFullHeader{
     transform: translateY(-100%);
     transition-duration: 1s;
-    width:  500px;
+    width:  600px;
     background-color: greenyellow;
     border-radius: 20px;
     align-content: center;
@@ -17,6 +17,12 @@
     display: inline-flex;
     width:  550px;
 
+}
+.activeLinks {
+    background-color: greenyellow;
+    font-size: xx-large;
+    margin: 20px;
+    color: white;
 }
 .links {
     background-color: greenyellow;
