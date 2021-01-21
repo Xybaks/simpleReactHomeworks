@@ -1,5 +1,7 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from "react";
 import SuperInputText from "../../../h4/common/c1-SuperInputText/SuperInputText";
+import s from "./SuperEditableSpan.module.css"
+import img from "../klipartz.png"
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
@@ -31,45 +33,48 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {};
 
     const onEnterCallback = () => {
-        // setEditMode(); // выключить editMode при нажатии Enter
-
+        setEditMode(false); // выключить editMode при нажатии Enter
         onEnter && onEnter();
+
     };
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
         // setEditMode(); // выключить editMode при нажатии за пределами инпута
 
         onBlur && onBlur(e);
+        setEditMode(false);
     };
     const onDoubleClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
         // setEditMode(); // включить editMode при двойном клике
-
         onDoubleClick && onDoubleClick(e);
+        setEditMode(true);
     };
 
-    const spanClassName = `${"сделать красивый стиль для спана"} ${className}`;
+    const spanClassName = `${s.span} ${className}`;
 
     return (
         <>
-            {editMode
-                ? (
-                    <SuperInputText
-                        autoFocus // пропсу с булевым значением не обязательно указывать true
-                        onBlur={onBlurCallback}
-                        onEnter={onEnterCallback}
-
-                        {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
-                    />
-                ) : (
+            {
+                editMode
+                    ? (
+                        <SuperInputText
+                            autoFocus // пропсу с булевым значением не обязательно указывать true
+                            onBlur={onBlurCallback}
+                            onEnter={onEnterCallback}
+                            {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+                        />
+                    ) : (<div>
                     <span
                         onDoubleClick={onDoubleClickCallBack}
                         className={spanClassName}
 
                         {...restSpanProps}
                     >
-                        {/*если нет захардкодженного текста для спана, то значение инпута*/}
                         {children || restProps.value}
                     </span>
-                )
+                            <img src={img}
+                                 onDoubleClick={onDoubleClickCallBack}/>
+                        </div>
+                    )
             }
         </>
     );
