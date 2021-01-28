@@ -1,0 +1,15 @@
+.radio{
+    margin: 10px;
+    padding: 5px;
+    background-color: yellow;
+    color: darkred;
+}
+.select{
+    margin: 10px;
+    padding: 5px;
+    background-color: green;
+    color: red;
+    font-size: xx-large;
+    border: dodgerblue solid 5px;
+    border-radius: 5px;
+}
