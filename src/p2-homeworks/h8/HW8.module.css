@@ -1,0 +1,11 @@
+.man {
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    border: yellow dashed 5px;
+    background-color: dodgerblue;
+    color: white;
+    font-style: italic;
+}
