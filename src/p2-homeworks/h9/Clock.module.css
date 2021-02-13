@@ -1,0 +1,17 @@
+.time {
+    width: 200px;
+    height: 70px;
+    font-size: xxx-large;
+    color: mediumorchid;
+    background-color: yellow;
+    border: 3px solid blue;
+    border-radius: 25px;
+    text-align: center
+}
+
+.date {
+    width: 200px;
+    font-size: large;
+    color: mediumorchid;
+    text-align: center
+}

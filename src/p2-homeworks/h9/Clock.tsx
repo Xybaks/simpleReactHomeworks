@@ -1,5 +1,6 @@
-import React, {useState} from "react";
+import React, {isValidElement, useState} from "react";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import style from "./Clock.module.css"
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0);
@@ -7,29 +8,35 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false);
 
     const stop = () => {
-        // stop
+        setDate(new Date())
+        clearTimeout(timerId);
     }
+
     const start = () => {
         stop();
         const id: number = window.setInterval(() => {
-            // setDate
+            setDate (new Date())
         }, 1000);
         setTimerId(id);
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
     };
     const onMouseLeave = () => {
-        // close
+
+        setShow(false)
     };
 
-    const stringTime = "Time"; // fix with date
-    const stringDate = "Date"; // fix with date
+    const stringTime = date?.toLocaleTimeString("ru"); // fix with date
+    //1st variant
+    const stringDate =date?.toLocaleDateString("ru")
+   //2nd variant
+   //  const stringDate =date?.getDate()+"."+date?.getMonth()+"."+date?.getFullYear()
 
     return (
         <div>
-            <div
+            <div className={style.time }
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
@@ -37,7 +44,7 @@ function Clock() {
             </div>
 
             {show && (
-                <div>
+                <div className={style.date} >
                     {stringDate}
                 </div>
             )}

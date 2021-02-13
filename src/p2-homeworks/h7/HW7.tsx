@@ -12,8 +12,7 @@ function HW7() {
             <hr/>
             homeworks 7
 
-            {/*should work (должно работать)*/}
-            <div>
+                      <div>
                 <SuperSelect
                     options={arr}
                     value={value}
