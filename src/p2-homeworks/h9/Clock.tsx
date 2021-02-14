@@ -15,7 +15,7 @@ function Clock() {
     const start = () => {
         stop();
         const id: number = window.setInterval(() => {
-            setDate (new Date())
+            setDate(new Date())
         }, 1000);
         setTimerId(id);
     }
@@ -30,21 +30,21 @@ function Clock() {
 
     const stringTime = date?.toLocaleTimeString("ru"); // fix with date
     //1st variant
-    const stringDate =date?.toLocaleDateString("ru")
-   //2nd variant
-   //  const stringDate =date?.getDate()+"."+date?.getMonth()+"."+date?.getFullYear()
+    const stringDate = date?.toLocaleDateString("ru")
+    //2nd variant
+    //  const stringDate =date?.getDate()+"."+date?.getMonth()+"."+date?.getFullYear()
 
     return (
         <div>
-            <div className={style.time }
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
+            <div className={style.time}
+                 onMouseEnter={onMouseEnter}
+                 onMouseLeave={onMouseLeave}
             >
                 {stringTime}
             </div>
 
             {show && (
-                <div className={style.date} >
+                <div className={style.date}>
                     {stringDate}
                 </div>
             )}
